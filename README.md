@@ -12,7 +12,8 @@
         .gradient-green { background: linear-gradient(135deg, #1a4d2e 0%, #2d7a44 100%); }
         .note-card { border-left: 4px solid #f59e0b; background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .photo-placeholder { border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; background: #f8fafc; min-height: 350px; border-radius: 2rem; color: #64748b; }
-        .value-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        .value-card { transition: all 0.3s ease; }
+        .value-card:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -34,7 +35,7 @@
                 <a href="#financiero" class="hover:text-green-700">Cifras</a>
             </div>
             <a href="EEFF_Notas_AgroMorales_2025.pdf" target="_blank" class="bg-green-700 text-white px-5 py-2 rounded-full text-xs font-black uppercase shadow-lg hover:bg-green-800 transition">
-                <i class="fas fa-file-pdf mr-2"></i> EEFF
+                <i class="fas fa-file-pdf mr-2"></i> Descargar EEFF
             </a>
         </div>
     </nav>
@@ -47,7 +48,7 @@
                     <img src="Imagen1.png" alt="Logo AgroMorales" class="h-32 md:h-40 w-auto">
                 </div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic">Informe <span class="text-yellow-400">2025</span></h1>
+            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic leading-none">Informe <span class="text-yellow-400">2025</span></h1>
             <p class="text-xl opacity-90 mb-8 font-medium italic text-balance">Agroindustrial de Servicios Morales S.A.S.</p>
             <div class="inline-flex bg-black/20 rounded-xl px-6 py-3 text-sm font-bold border border-white/10 italic tracking-wide">
                 NIT: 901.271.865-4 | Zarzal, Valle
@@ -66,17 +67,16 @@
                 <div class="bg-slate-100 p-8 rounded-3xl border border-slate-200">
                     <h3 class="text-xl font-black text-slate-800 uppercase italic mb-3">Compromiso Legal</h3>
                     <p class="text-slate-600 leading-relaxed text-sm">
-                        Cumplimos con la Leyes Colombiana que regulan las funciones financieras contables y de auditoría, que buscan prevenir el soborno y la corrupción. Trabajamos por el fortalecimiento de la credibilidad de la empresa, de esa forma siendo confiable para nuestros clientes y proveedores.
+                        Cumplimos con la Leyes Colombianas que regulan las funciones financieras contables y de auditoría, que buscan prevenir el soborno y la corrupción. Trabajamos por el fortalecimiento de la credibilidad de la empresa, de esa forma siendo confiable para nuestros clientes y proveedores.
                     </p>
                 </div>
             </div>
             <div class="bg-green-50 p-10 rounded-[2.5rem] border border-green-100 space-y-6 self-start shadow-sm">
-                <h3 class="text-2xl font-black text-green-900 uppercase italic">Integridad Empresarial</h3>
+                <h3 class="text-2xl font-black text-green-900 uppercase italic leading-tight">Integridad Empresarial</h3>
                 <p class="text-slate-700 leading-relaxed text-sm">
                     Contamos con prácticas que orientan la gestión hacia la integridad, la eficiencia, y el cumplimiento de la ley. De esta manera, implementamos instrumentos que permiten promover estos criterios, evaluar su cumplimiento y actuar en consecuencia.
                 </p>
                 <div class="photo-placeholder !min-h-[250px] !bg-white/50">
-                     <!-- [Imagen de Campo o Certificación] -->
                     <i class="fas fa-balance-scale text-5xl opacity-10 text-green-700"></i>
                 </div>
             </div>
@@ -88,7 +88,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-slate-900 uppercase italic">Nuestros Valores</h2>
-                <p class="text-slate-500 max-w-3xl mx-auto mt-4">
+                <p class="text-slate-500 max-w-3xl mx-auto mt-4 font-medium">
                     Los principios y valores hacen parte del cómo materializamos nuestra aspiración empresarial, misión y estrategia, ya que orientan nuestras acciones y decisiones, contribuyen en la resolución de conflictos y nos permiten priorizar.
                 </p>
             </div>
@@ -97,31 +97,31 @@
                     <div class="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-handshake text-yellow-500 text-3xl"></i>
                     </div>
-                    <h4 class="font-black uppercase text-sm tracking-widest">Integridad</h4>
+                    <h4 class="font-black uppercase text-sm tracking-widest leading-tight">Integridad</h4>
                 </div>
                 <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
                     <div class="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-shield-alt text-yellow-500 text-3xl"></i>
                     </div>
-                    <h4 class="font-black uppercase text-sm tracking-widest">Seguridad</h4>
+                    <h4 class="font-black uppercase text-sm tracking-widest leading-tight">Seguridad</h4>
                 </div>
                 <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
                     <div class="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-cogs text-yellow-500 text-3xl"></i>
                     </div>
-                    <h4 class="font-black uppercase text-sm tracking-widest">Excelencia operacional</h4>
+                    <h4 class="font-black uppercase text-sm tracking-widest leading-tight">Excelencia operacional</h4>
                 </div>
                 <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
                     <div class="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-sync-alt text-yellow-500 text-3xl"></i>
                     </div>
-                    <h4 class="font-black uppercase text-sm tracking-widest">Adaptabilidad</h4>
+                    <h4 class="font-black uppercase text-sm tracking-widest leading-tight">Adaptabilidad</h4>
                 </div>
                 <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
                     <div class="bg-yellow-50 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-users text-yellow-500 text-3xl"></i>
                     </div>
-                    <h4 class="font-black uppercase text-sm tracking-widest">Colaboración</h4>
+                    <h4 class="font-black uppercase text-sm tracking-widest leading-tight">Colaboración</h4>
                 </div>
             </div>
         </div>
@@ -165,14 +165,14 @@
                     <div class="photo-placeholder !bg-slate-800 !border-slate-700 h-80">
                         <i class="fas fa-tractor text-5xl opacity-10 text-green-500"></i>
                     </div>
-                    <h3 class="text-2xl font-black uppercase italic">Actividades de Campo</h3>
+                    <h3 class="text-2xl font-black uppercase italic tracking-tight">Actividades de Campo</h3>
                     <p class="text-slate-400">Asistencia técnica agrícola con ingresos de $8.221.916.594. Somos especialistas en el apoyo integral a la agricultura.</p>
                 </div>
                 <div class="space-y-6">
                     <div class="photo-placeholder !bg-slate-800 !border-slate-700 h-80">
                         <i class="fas fa-truck-moving text-5xl opacity-10 text-yellow-500"></i>
                     </div>
-                    <h3 class="text-2xl font-black uppercase italic">Transporte Logístico</h3>
+                    <h3 class="text-2xl font-black uppercase italic tracking-tight">Transporte Logístico</h3>
                     <p class="text-slate-400">Movilización de pasajeros y carga con ingresos de $796.160.552, cumpliendo con los más altos estándares de seguridad vial.</p>
                 </div>
             </div>
@@ -180,9 +180,9 @@
     </section>
 
     <!-- Cifras -->
-    <section id="financiero" class="py-24 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-black mb-12 uppercase italic text-center tracking-tighter">Resultados <span class="text-green-700">Consolidados</span></h2>
-        <div class="grid lg:grid-cols-3 gap-8 mb-12">
+    <section id="financiero" class="py-24 max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-black mb-12 uppercase italic tracking-tighter italic">Resultados <span class="text-green-700">Consolidados</span></h2>
+        <div class="grid lg:grid-cols-3 gap-8 mb-16 text-left">
             <div class="note-card">
                 <h4 class="text-xs font-black uppercase text-slate-400 mb-4 tracking-widest">Activos Totales</h4>
                 <p class="text-3xl font-black text-slate-900">$6.976.219.107</p>
@@ -211,7 +211,7 @@
             <a href="EEFF_Notas_AgroMorales_2025.pdf" target="_blank" class="flex items-center space-x-4 bg-slate-900 text-white px-10 py-5 rounded-[2rem] shadow-2xl hover:bg-slate-800 transition transform hover:scale-105 border border-slate-700">
                 <i class="fas fa-file-pdf text-3xl text-red-500"></i>
                 <div class="text-left">
-                    <p class="text-[10px] uppercase font-black opacity-60 leading-none mb-1">Descargar Documento</p>
+                    <p class="text-[10px] uppercase font-black opacity-60 leading-none mb-1 tracking-widest">Descargar Documento</p>
                     <p class="text-lg font-bold leading-none">EEFF con Notas Específicas (PDF)</p>
                 </div>
             </a>
