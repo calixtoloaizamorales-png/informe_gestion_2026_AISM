@@ -8,12 +8,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gradient-green { background: linear-gradient(135deg, #1a4d2e 0%, #2d7a44 100%); }
-        .note-card { border-left: 4px solid #f59e0b; background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .photo-placeholder { border: 2px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; background: #f8fafc; min-height: 350px; border-radius: 2rem; color: #64748b; }
-        .value-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .value-card:hover { transform: translateY(-5px); border-color: #34a853; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .gradient-green {
+            background: linear-gradient(135deg, #1a4d2e 0%, #2d7a44 100%);
+        }
+
+        .photo-placeholder {
+            border: 2px dashed #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8fafc;
+            min-height: 300px;
+            border-radius: 2rem;
+            color: #64748b;
+        }
+
+        .note-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 4rem 0;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -22,191 +51,189 @@
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 flex justify-between h-20 items-center">
             <div class="flex items-center space-x-4">
-                <img src="Imagen1.png" alt="Logo AgroMorales" class="h-14 w-auto object-contain">
-                <div class="hidden sm:flex flex-col">
-                    <span class="font-black text-xl leading-none text-slate-800 uppercase italic">AgroMorales</span>
-                    <span class="text-[10px] uppercase text-green-700 font-bold">Servicios Morales S.A.S.</span>
+                <img src="Imagen1.png" alt="Logo AgroMorales" class="h-14 w-auto object-contain" onerror="this.style.display='none';">
+                <div class="flex flex-col">
+                    <span class="font-black text-xl leading-none tracking-tighter text-slate-800 uppercase italic">AgroMorales</span>
+                    <span class="text-[10px] uppercase tracking-widest text-green-700 font-bold">Servicios Morales S.A.S.</span>
                 </div>
             </div>
-            <div class="hidden lg:flex space-x-6 text-xs font-bold text-slate-500 uppercase tracking-widest">
+            <div class="hidden lg:flex space-x-6 text-xs font-black text-slate-500 uppercase tracking-widest">
                 <a href="#quienes-somos" class="hover:text-green-700">Nosotros</a>
-                <a href="#valores" class="hover:text-green-700">Valores</a>
-                <a href="#operaciones" class="hover:text-green-700">Gestión</a>
+                <a href="#gestion" class="hover:text-green-700">Gestión</a>
                 <a href="#financiero" class="hover:text-green-700">Cifras</a>
+                <a href="#revelaciones" class="hover:text-green-700">Revelaciones</a>
             </div>
-            <a href="EEFF_Notas_AgroMorales_2025.pdf" target="_blank" class="bg-green-700 text-white px-5 py-2 rounded-full text-xs font-black uppercase shadow-lg hover:bg-green-800 transition">
-                <i class="fas fa-file-pdf mr-2"></i> Descargar EEFF
-            </a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header id="inicio" class="gradient-green text-white py-24 px-4 text-center">
+    <!-- Portada (Página 1) -->
+    <header class="gradient-green text-white py-32 px-4 text-center">
         <div class="max-w-5xl mx-auto">
-            <div class="mb-10 flex justify-center">
-                <div class="bg-white p-6 rounded-[2.5rem] shadow-2xl">
-                    <img src="Imagen1.png" alt="Logo AgroMorales" class="h-32 md:h-40 w-auto">
+            <div class="mb-12 flex justify-center">
+                <div class="bg-white p-8 rounded-[3rem] shadow-2xl">
+                    <img src="Imagen1.png" alt="Logo" class="h-32 md:h-44 w-auto">
                 </div>
             </div>
-            <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic leading-none">Informe <span class="text-yellow-400">2025</span></h1>
-            <p class="text-xl opacity-90 mb-8 font-medium italic">Agroindustrial de Servicios Morales S.A.S.</p>
-            <div class="inline-flex bg-black/20 rounded-xl px-6 py-3 text-sm font-bold border border-white/10 italic">
-                NIT: 901.271.865-4 | Zarzal, Valle
+            <h1 class="text-6xl md:text-9xl font-black mb-4 tracking-tighter uppercase italic leading-none">
+                Informe <span class="text-yellow-400">2025</span>
+            </h1>
+            <p class="text-xl md:text-2xl opacity-90 font-medium italic mb-10 text-balance">
+                Rendición de cuentas y estados financieros consolidados.
+            </p>
+            <div class="bg-black/20 rounded-2xl px-8 py-4 inline-block border border-white/10 font-bold">
+                NIT: 901.271.865-4 | Zarzal, Valle del Cauca
             </div>
         </div>
     </header>
 
-    <!-- Quiénes Somos -->
-    <section id="quienes-somos" class="py-20 max-w-7xl mx-auto px-4">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6">
+    <!-- Quiénes Somos e Integridad (Página 2) -->
+    <section id="quienes-somos" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <div class="space-y-6 text-justify">
                 <h2 class="text-4xl font-black text-slate-900 uppercase italic border-l-8 border-green-700 pl-6">Quiénes Somos</h2>
-                <p class="text-lg text-slate-600 leading-relaxed text-justify">
-                    Somos una empresa que desarrolla Actividades de apoyo a la agricultura. Que abarca servicios agrícolas especializados, prestados generalmente a cambio de una retribución o por contrata, como la preparación de terrenos, siembra, cultivo, fumigación y alquiler de maquinaria agrícola con operarios, contribuyendo a la producción de cultivos, adicional se brinda el acompañamiento vial a los desplazamientos de la maquinaria agrícola por las diferentes fincas donde se realiza las actividades agropecuarias.
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Somos una empresa que desarrolla <strong>Actividades de apoyo a la agricultura</strong>. Abarcamos servicios agrícolas especializados, prestados generalmente a cambio de una retribución o por contrata, como la preparación de terrenos, siembra, cultivo, fumigación y alquiler de maquinaria agrícola con operarios, contribuyendo a la producción de cultivos, adicional se brinda el acompañamiento vial a los desplazamientos de la maquinaria agrícola por las diferentes fincas donde se realizan las actividades agropecuarias.
                 </p>
-                <p class="text-slate-600 leading-relaxed text-justify">
-                    Cumplimos con la Leyes Colombiana que regulan las funciones financieras contables y de auditoría, que buscan prevenir el soborno y la corrupción. Trabajamos por el fortalecimiento de la credibilidad de la empresa, de esa forma siendo confiable para nuestros clientes y proveedores.
-                </p>
-            </div>
-            <div class="bg-green-50 p-10 rounded-[2.5rem] border border-green-100 space-y-6 shadow-sm">
-                <h3 class="text-2xl font-black text-green-900 uppercase italic">Integridad Empresarial</h3>
-                <p class="text-slate-700 leading-relaxed">
-                    Contamos con prácticas que orientan la gestión hacia la integridad, la eficiencia, y el cumplimiento de la ley. De esta manera, implementamos instrumentos que permiten promover estos criterios, evaluar su cumplimiento y actuar en consecuencia.
-                </p>
-                <div class="flex items-center space-x-4 text-green-700">
-                    <i class="fas fa-balance-scale text-4xl"></i>
-                    <span class="font-bold text-sm uppercase tracking-widest">Cumplimiento y Transparencia</span>
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm">
+                    <h3 class="text-xl font-black text-green-700 uppercase italic mb-4">Valores Corporativos</h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold uppercase tracking-tight">
+                        <li class="flex items-center space-x-2"><i class="fas fa-check text-yellow-500"></i> <span>Integridad</span></li>
+                        <li class="flex items-center space-x-2"><i class="fas fa-check text-yellow-500"></i> <span>Seguridad</span></li>
+                        <li class="flex items-center space-x-2"><i class="fas fa-check text-yellow-500"></i> <span>Excelencia operacional</span></li>
+                        <li class="flex items-center space-x-2"><i class="fas fa-check text-yellow-500"></i> <span>Adaptabilidad</span></li>
+                        <li class="flex items-center space-x-2"><i class="fas fa-check text-yellow-500"></i> <span>Colaboración</span></li>
+                    </ul>
                 </div>
+            </div>
+            <div class="bg-green-700 text-white p-12 rounded-[3rem] shadow-xl flex flex-col justify-center space-y-6">
+                <h3 class="text-3xl font-black uppercase italic">Integridad Empresarial</h3>
+                <p class="leading-relaxed opacity-90 text-justify">
+                    Cumplimos con las Leyes Colombiana que regulan las funciones financieras contables y de auditoría, que buscan prevenir el soborno y la corrupción. Trabajamos por el fortalecimiento de la credibilidad de la empresa, de esa forma siendo confiable para nuestros clientes y proveedores.
+                </p>
+                <p class="leading-relaxed opacity-90 text-justify">
+                    Contamos con prácticas que orientan la gestión hacia la integridad, la eficiencia, y el cumplimiento de la ley. Implementamos instrumentos que permiten promover estos criterios, evaluar su cumplimiento y actuar en consecuencia.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Valores -->
-    <section id="valores" class="py-20 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-slate-900 uppercase italic">Nuestros Valores</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto mt-4">
-                    Los principios y valores orientan nuestras acciones y decisiones, contribuyendo en la resolución de conflictos y permitiéndonos priorizar la excelencia.
-                </p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
-                    <i class="fas fa-handshake text-yellow-500 text-3xl mb-4"></i>
-                    <h4 class="font-black uppercase text-xs tracking-widest">Integridad</h4>
-                </div>
-                <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
-                    <i class="fas fa-user-shield text-yellow-500 text-3xl mb-4"></i>
-                    <h4 class="font-black uppercase text-xs tracking-widest">Seguridad</h4>
-                </div>
-                <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
-                    <i class="fas fa-chart-line text-yellow-500 text-3xl mb-4"></i>
-                    <h4 class="font-black uppercase text-xs tracking-widest leading-tight">Excelencia<br>operacional</h4>
-                </div>
-                <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
-                    <i class="fas fa-sync-alt text-yellow-500 text-3xl mb-4"></i>
-                    <h4 class="font-black uppercase text-xs tracking-widest">Adaptabilidad</h4>
-                </div>
-                <div class="value-card bg-white p-8 rounded-3xl text-center shadow-sm">
-                    <i class="fas fa-users text-yellow-500 text-3xl mb-4"></i>
-                    <h4 class="font-black uppercase text-xs tracking-widest">Colaboración</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gestión -->
-    <section id="operaciones" class="bg-slate-900 py-24 text-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black mb-4 uppercase italic tracking-tighter">Informe de <span class="text-green-400">Gestión</span></h2>
-                <p class="text-slate-400 max-w-3xl mx-auto">
-                    Compartimos nuestro informe de gestión anual que socializa los aspectos más relevantes del negocio durante el año en el ámbito económico y social.
-                </p>
-            </div>
+    <!-- Informe de Gestión (Página 3) -->
+    <section id="gestion" class="bg-slate-900 py-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-5xl font-black mb-8 uppercase italic tracking-tighter">Informe de <span class="text-green-400">Gestión Anual</span></h2>
+            <p class="text-slate-400 mb-16 max-w-3xl mx-auto italic text-lg text-balance">
+                Compartimos nuestro informe de gestión anual que socializa los aspectos más relevantes del negocio durante el año en el ámbito económico y social.
+            </p>
             <div class="grid md:grid-cols-2 gap-12 text-left">
                 <div class="space-y-6">
-                    <div class="photo-placeholder !bg-slate-800 !border-slate-700 h-80">
-                        <i class="fas fa-tractor text-5xl opacity-10 text-green-500"></i>
+                    <div class="photo-placeholder !bg-slate-800 !border-slate-700">
+                        <i class="fas fa-tractor text-5xl opacity-5"></i>
+                        <p class="absolute bottom-6 text-[10px] uppercase font-bold text-slate-600 italic tracking-[0.2em]">[Imagen Actividades de Campo]</p>
                     </div>
-                    <h3 class="text-2xl font-black uppercase italic tracking-tight">Actividades de Campo</h3>
-                    <p class="text-slate-400 text-sm">Preparación de terrenos, siembra, fumigación y alquiler de maquinaria agrícola con operarios. Ingresos: $8.221.916.594.</p>
+                    <h3 class="text-2xl font-black uppercase italic">Campo y Producción</h3>
+                    <p class="text-slate-400 text-sm">Operación principal que abarca la preparación y asistencia técnica. Ingresos registrados: <strong>$8.221.916.594</strong>.</p>
                 </div>
                 <div class="space-y-6">
-                    <div class="photo-placeholder !bg-slate-800 !border-slate-700 h-80">
-                        <i class="fas fa-truck-moving text-5xl opacity-10 text-yellow-500"></i>
+                    <div class="photo-placeholder !bg-slate-800 !border-slate-700">
+                        <i class="fas fa-truck-moving text-5xl opacity-5"></i>
+                        <p class="absolute bottom-6 text-[10px] uppercase font-bold text-slate-600 italic tracking-[0.2em]">[Imagen Transporte Logístico]</p>
                     </div>
-                    <h3 class="text-2xl font-black uppercase italic tracking-tight">Transporte Logístico</h3>
-                    <p class="text-slate-400 text-sm">Acompañamiento vial y transporte especializado para el sector agroindustrial. Ingresos: $796.160.552.</p>
+                    <h3 class="text-2xl font-black uppercase italic">Logística Vial</h3>
+                    <p class="text-slate-400 text-sm">Transporte especializado y acompañamiento vial a maquinaria. Ingresos registrados: <strong>$796.160.552</strong>.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Cifras -->
-    <section id="financiero" class="py-24 max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-3xl font-black mb-12 uppercase italic tracking-tighter italic">Resultados <span class="text-green-700">Consolidados</span></h2>
-        <div class="grid lg:grid-cols-3 gap-8 mb-16 text-left">
-            <div class="note-card">
-                <h4 class="text-xs font-black uppercase text-slate-400 mb-4 tracking-widest">Activos Totales</h4>
-                <p class="text-3xl font-black text-slate-900">$6.976.219.107</p>
-                <div class="mt-4 w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div class="bg-green-600 h-full w-full"></div>
-                </div>
-            </div>
-            <div class="note-card">
-                <h4 class="text-xs font-black uppercase text-slate-400 mb-4 tracking-widest">Utilidad del Ejercicio</h4>
-                <p class="text-3xl font-black text-green-700">$656.233.278</p>
-                <div class="mt-4 w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div class="bg-green-600 h-full w-3/4"></div>
-                </div>
-            </div>
-            <div class="note-card">
-                <h4 class="text-xs font-black uppercase text-slate-400 mb-4 tracking-widest">Flujo de Efectivo</h4>
-                <p class="text-3xl font-black text-slate-900">$183.617.251</p>
-                <div class="mt-4 w-full bg-slate-100 h-2 rounded-full overflow-hidden">
-                    <div class="bg-yellow-500 h-full w-1/4"></div>
-                </div>
-            </div>
+    <!-- Estados Financieros (Página 4) -->
+    <section id="financiero" class="py-24 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black text-slate-900 uppercase italic leading-none tracking-tighter italic">Situación <span class="text-green-700">Financiera 2025</span></h2>
         </div>
-
-        <!-- Botón de Descarga Principal -->
-        <div class="flex justify-center">
-            <a href="EEFF_Notas_AgroMorales_2025.pdf" target="_blank" class="flex items-center space-x-6 bg-slate-900 text-white px-12 py-6 rounded-[2.5rem] shadow-2xl hover:bg-slate-800 transition transform hover:scale-105 border border-slate-700">
-                <i class="fas fa-file-pdf text-4xl text-red-500"></i>
-                <div class="text-left">
-                    <p class="text-[10px] uppercase font-black opacity-60 leading-none mb-1 tracking-widest italic">Documento Oficial</p>
-                    <p class="text-xl font-bold leading-none">Descargar EEFF con Notas (PDF)</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Firmas -->
-    <section id="legal" class="py-24 bg-white border-t">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-16 text-center">
-                <div class="space-y-4">
-                    <div class="h-20 border-b-2 border-slate-100 flex items-end justify-center pb-2 uppercase text-[10px] font-black text-slate-300 italic tracking-widest">Firma Representante</div>
-                    <p class="font-black text-slate-900 uppercase text-lg italic leading-none">José Alcides Morales</p>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Gerente General</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="h-20 border-b-2 border-slate-100 flex items-end justify-center pb-2 uppercase text-[10px] font-black text-slate-300 italic tracking-widest">Firma Contadora</div>
-                    <p class="font-black text-slate-900 uppercase text-lg italic leading-none">M. Alejandra Zamorano</p>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">T.P. 329449-T</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="h-20 border-b-2 border-slate-100 flex items-end justify-center pb-2 uppercase text-[10px] font-black text-slate-300 italic tracking-widest">Firma Revisor</div>
-                    <p class="font-black text-slate-900 uppercase text-lg italic leading-none">Calixto Loaiza Morales</p>
-                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">T.P. 233038-T</p>
-                </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="note-card border-t-8 border-t-green-700">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">Total Activos</p>
+                <p class="text-4xl font-black text-slate-900 leading-none tracking-tighter">$6.376.219.107</p>
+                <div class="mt-6 h-1 w-full bg-slate-100 rounded-full"><div class="h-full bg-green-700 w-full rounded-full"></div></div>
+            </div>
+            <div class="note-card border-t-8 border-t-yellow-500">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">Total Pasivos</p>
+                <p class="text-4xl font-black text-slate-900 leading-none tracking-tighter">$2.938.634.405</p>
+                <div class="mt-6 h-1 w-full bg-slate-100 rounded-full"><div class="h-full bg-yellow-500 w-1/2 rounded-full"></div></div>
+            </div>
+            <div class="note-card border-t-8 border-t-green-700">
+                <p class="text-xs font-black text-slate-400 uppercase tracking-widest mb-4">Patrimonio Neto</p>
+                <p class="text-4xl font-black text-green-700 leading-none tracking-tighter">$3.437.584.702</p>
+                <div class="mt-6 h-1 w-full bg-slate-100 rounded-full"><div class="h-full bg-green-700 w-3/4 rounded-full"></div></div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-white/40 py-12 text-center text-[10px] uppercase font-bold tracking-widest italic border-t border-white/5">
-        © 2025 Agroindustrial de Servicios Morales S.A.S. - Todos los derechos reservados
+    <!-- Revelaciones y Notas (Página 5 - Digitalización del PDF) -->
+    <section id="revelaciones" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-black text-center text-slate-900 uppercase italic mb-16 underline decoration-yellow-400 decoration-8 underline-offset-8">Notas y Revelaciones</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-sm leading-relaxed">
+                <!-- Nota 5 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-green-700 uppercase mb-4 border-b border-slate-200 pb-2 italic">Nota 5 - Propiedad, Planta y Equipo</h4>
+                    <p class="text-slate-600">La cuenta ascendió a <strong>$3.319.030.867</strong>. Representa una inversión neta de más de $850 millones en activos operativos para fortalecer la capacidad productiva.</p>
+                </div>
+                <!-- Nota 13 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-green-700 uppercase mb-4 border-b border-slate-200 pb-2 italic">Nota 13 - Ingresos Ordinarios</h4>
+                    <p class="text-slate-600">Reportamos ingresos por <strong>$9.094.562.481</strong>. El crecimiento se sustenta en la línea agropecuaria, que aumentó en $1.100 millones vs 2024.</p>
+                </div>
+                <!-- Nota 14 -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-green-700 uppercase mb-4 border-b border-slate-200 pb-2 italic">Nota 14 - Costos de Ventas</h4>
+                    <p class="text-slate-600">Se logró una utilidad bruta de <strong>$6.450.908.360</strong>, permitiendo absorber gastos administrativos y financieros de forma sólida.</p>
+                </div>
+                <!-- Efectivo -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-green-700 uppercase mb-4 border-b border-slate-200 pb-2 italic">Flujo de Efectivo</h4>
+                    <p class="text-slate-600">Se generó un efectivo neto por actividades de operación de <strong>$679.726.095</strong>, cerrando con un disponible de $183.617.251.</p>
+                </div>
+                <!-- Legal -->
+                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-green-700 uppercase mb-4 border-b border-slate-200 pb-2 italic text-pretty">Cumplimiento Normativo</h4>
+                    <p class="text-slate-600">La administración certifica el cumplimiento de normas de propiedad intelectual y el pago oportuno de seguridad social integral.</p>
+                </div>
+                <!-- Descarga Fallback -->
+                <div class="p-8 bg-green-700 rounded-2xl text-white flex flex-col justify-center items-center text-center shadow-lg">
+                    <i class="fas fa-file-pdf text-4xl mb-4"></i>
+                    <p class="text-[10px] font-bold uppercase tracking-widest mb-2 italic">Documento PDF Oficial</p>
+                    <a href="EEFF_Notas_AgroMorales_2025.pdf" target="_blank" class="bg-white text-green-700 px-6 py-2 rounded-full font-black text-xs uppercase hover:bg-yellow-400 hover:text-green-900 transition">
+                        Bajar PDF Completo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firmas (Página Final) -->
+    <section class="py-32 px-4 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-16 text-center">
+            <div class="space-y-4">
+                <div class="h-20 border-b border-slate-200 flex items-end justify-center pb-2 font-light text-slate-300 italic">Firma Representante</div>
+                <p class="font-black text-slate-900 uppercase italic">José Alcides Morales</p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Representante Legal</p>
+            </div>
+            <div class="space-y-4">
+                <div class="h-20 border-b border-slate-200 flex items-end justify-center pb-2 font-light text-slate-300 italic">Firma Contadora</div>
+                <p class="font-black text-slate-900 uppercase italic">M. Alejandra Zamorano</p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">T.P. 329449-T</p>
+            </div>
+            <div class="space-y-4">
+                <div class="h-20 border-b border-slate-100 flex items-end justify-center pb-2 font-light text-slate-300 italic">Firma Revisor</div>
+                <p class="font-black text-slate-900 uppercase italic leading-none">Calixto Loaiza Morales</p>
+                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">T.P. 233038-T</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-white/30 py-16 text-center text-[10px] font-black uppercase tracking-[0.3em] italic border-t border-white/5">
+        © 2025 Agroindustrial de Servicios Morales S.A.S. - Zarzal, Valle
     </footer>
 
 </body>
